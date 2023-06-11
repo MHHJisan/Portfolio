@@ -142,7 +142,7 @@
      display: flex;
      justify-content: space-between;
      width: 345px;
-     height: 50px;
+     height: 46px;
      /* background: yellowgreen; */
      
  }
@@ -153,7 +153,8 @@
     right: 0;
     width: 100%;
     height: 100%;
-    background: #081b29;
+    /* background: var(--second-bg-color); */
+    background: var(--bg-color);
     animation: upDown 2s ease forwards;
     animation-delay: 3.8s;
     z-index: 2;
@@ -183,7 +184,7 @@
      align-items: center;
      width: 150px;
      height: 100%;
-     background: transparent;
+     /* background: transparent; */
      border: 2px solid #00abf0;
      border-radius: 8px;
      font-size: 19px;
@@ -192,12 +193,13 @@
      font-weight: 600;
      letter-spacing: 1px;
      z-index: 1;
-     overflow: hidden;
-     /* transition: 0.5s; */
+     /* overflow: hidden; */
+     transition: 0.5s;
  }
  .btn-box a:hover{
      background: #00abf0;
      color: var(--second-bg-color);
+     /* color: var(--ma); */
  }
  .btn-box a::before {
     content: '';
@@ -206,15 +208,18 @@
     left: 0;
     width: 0;
     height: 100%;
-    background: #081b29 ;
-    color: #00abf0;
+    background: #00abf0;
+    /* color: var(--second-bg-color); */
+    /* color: red; */
     z-index: -1;
     transition: 0.5s;
 }
 .btn-box a:hover::before{
     width: 100%;
-    color: #081b29;
-    background: #00abf0;
+    /* background: var(--main-color);
+    color: #081b29; */
+    /* color: yellow; */
+    /* background: yellow; */
 }
 
 .btn-box a:nth-child(2){
@@ -243,35 +248,42 @@
      position: absolute;
      bottom: 3rem;
      width: 170px;
-     display: flex;
-     justify-content: space-between;
-     /* padding-right: 5rem; */
+     display: flex; 
+     justify-content: space-between; /*
+     padding-right: 5rem; 
+     /* color: red; */
  }
 
  .home-sci a {
-     position: relative;
-     display: inline-flex;
-     justify-content: center;
-     align-items: center;
-     width: 40px;
-     height: 40px;
+     position: relative; 
+     display: inline-flex; 
+     justify-content: center; 
+     align-items: center; 
+     width: 2em;
+     height: 2em; 
      /* padding-right: 5px; */
-     background: transparent;
+     /* /* background: transparent; */
      border: .2rem solid var(--main-color);
      border-radius: 50%;
      font-size: 20px;
      color: var(--main-color); 
      z-index: 1;
       overflow: hidden;
-     transition: .5s;
+     transition: .5s; */
  }
  .home-sci a::before{
-     content: none;
-     position: absolute;
+     /* content: none;
+     position: absolute; */
+     /* color: transparent; */
 
  }
  .home-sci a:hover{
-     color: #00abf0;
+     /* color: #00abf0; */
+     /* color: red; */
+     /* color: var(--text-color); */
+ } 
+ .home-sci a:hover::before{
+     /* color: transparent; */
  }
 
  .home-imgHover {
@@ -281,14 +293,14 @@
      width: 500px;
      height: 100%;
      background: transparent;
-     /* border: 2px solid red; */
+     border: 2px solid red; 
      transition: 3s;
-     /* background: url('self.jpeg') no-repeat; */
- }
- .home-imgHover:hover{
+     background: url('self.jpeg') no-repeat;
+ } 
+ /* .home-imgHover:hover{
      background: #081b29;
      opacity: 0.1;
- }
+ } */
 
  .about{
      display: flex;
@@ -392,15 +404,42 @@
      padding-left: 2rem;
  }
 
+ .education-box .education-content::before{
+     content: '';
+     position: absolute;
+     top: 0;
+     left: -1.1rem;
+     width: 2rem;
+     height: 2rem;
+     background: var(--main-color);
+     border-radius: 50%;
+}
+
  .education-content .content {
      position: relative;
      padding: 1.5rem;
      border: .2rem solid var(--main-color);
      border-radius: .6rem;
      margin-bottom: 2rem;
+     overflow: hidden;
 
  }
 
+ .education-content .content::before {
+     content: '';
+     position: absolute;
+     top: 0;
+     left: 0;
+     width: 0;
+     height: 100%;
+     background: red;
+     z-index: -1;
+     transition: .5s;
+ }
+
+ .education-content .content:hover::before{
+     width: 100%;
+ }
  .education-content .content .year{
      font-size: 1.5rem;
      color: var(--main-color);
@@ -428,5 +467,5 @@
 
  @keyframes upDown{
      from {top: 0px;}
-     to {top: 200px;}
+     to {top: 46px;}
  }
