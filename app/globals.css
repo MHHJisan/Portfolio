@@ -1,0 +1,30 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --bg-color: #081b29;
+  --second-bg-color: #112e42;
+  --text-color: #ededed;
+  --main-color: #00abf0;
+}
+
+body {
+  background: var(--bg-color);
+  color: var(--text-color);
+}
+
+@keyframes showRight {
+  100% {
+    width: 0;
+  }
+}
+
+@keyframes upDown {
+  from {
+    top: 0px;
+  }
+  to {
+    top: 46px;
+  }
+}
